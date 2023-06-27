@@ -56,7 +56,8 @@ Langkah selanjutnya yaitu melihat apakah terdapat outliers pada data. Dari semua
 sns.boxplot(data=data, x=data['Age'])
 plt.title("Boxplot Age")
 ```
-![image](https://github.com/powtoonang/coba/assets/137903953/945c0754-d91d-411a-a92f-6380a493f0fd)
+![image](https://github.com/powtoonang/coba/assets/137903953/09435adc-1aed-44a3-bbf0-8ea50d638bb9)
+
 
 Gambar 1. Outliers
 
@@ -64,7 +65,8 @@ Outliers pada variabel Age ini tidak dibuang. Hal itu dikarenakan outliers terse
 
 Langkah selanjutnya yaitu dilakukan pengecekan keseimbangan data.
 
-![image](https://github.com/powtoonang/coba/assets/137903953/ab5d1290-fad0-4f1a-a059-783813a451c6)
+![image](https://github.com/powtoonang/coba/assets/137903953/333dd49c-39b3-4370-b880-7dac341f5931)
+
 
 Gambar 2. Keseimbangan Data
 
@@ -102,7 +104,8 @@ plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%',
 plt.title('Data Training 80%:20% Setelah Dilakukan Balancing Data')
 plt.show()
 ```
-![image](https://github.com/powtoonang/coba/assets/137903953/fb67648e-1588-44bb-bc34-5c8c80c3289d)
+![image](https://github.com/powtoonang/coba/assets/137903953/a76d1f3c-8226-4b4c-b404-fc78791b36a8)
+
 
 Gambar 3. Keseimbangn Data Setelah SMOTE
 
@@ -112,14 +115,17 @@ terlihat bahwa data sudah seimbang. Data dengan label -1 setelah diseimbangkan m
 Algoritma Random Forest merupakan salah satu ensemble learning. Ensemble learning adalah metode dimana model akan dilatih untuk memecahkan masalah yang sama dan digabungkan untuk mendapatkan suatu hasil yang lebih baik. Algoritma Random Forest ini ialah algoritma yang dikembangkan dari algoritma Decision Tree. Decision tree adalah algoritma yang berbentuk sebuah pohon untuk mengambil kesimpulan. Decision Tree ini dapat digunakan untuk mengklasifikasikan sebuah data dengan variabel input dan output dalam bentuk pohon. Terdapat beberapa istilah yang digunakan dalam Decision Tree, yaitu root node, internal node, dan leaf. Root merupakan node yang terletak pada bagian paling atas di pohon. Internal node merupakan node percabangan yang masih memiliki cabang di bawahnya, sedangkan leaf merupakan node akhir yang tidak memiliki percabangan lagi. Decision Tree akan memasukkan sebuah input melalui root, dan memiliki kesimpulan melalui leaf node untuk menentukan data input termasuk dalam kelas yang mana. Algoritma ini dikembangkan menjadi sebuah algoritma baru yang dinamakan sebagai Random Forest. Sesuai dengan namanya, algoritma ini akan menciptakan sebuah hutan dengan sejumlah pohon. Cara kerja klasifikasi menggunakan algoritma ini yaitu Random Forest akan melakukan bootstrap pada data training untuk membentuk setiap pohon. Selanjutnya, pohon tersebut akan digabungkan dengan pohon yang lain, dimana satu pohon akan menghasilkan satu keputusan. Oleh sebab itu, algorima Random Forest ini dapat dikatakan sebagai kumpulan Decision Tree. Untuk mendapatkan hasil akhir, maka dilakukan majority voting dimana vote terbanyak akan menjadi pemenangnya. Menurut Pamuji dan Ramadhan (2021), algoritma Random Forest ini memiliki kelebihan yaitu dapat menghasilkan eror yang relatif rendah, performa yang baik dalam klasifikasi, dan cocok untuk data yang berjumlah besar. Parameter yang dapat digunakan dalam algoritma ini yaitu n estimator (jumlah pohon), max feature (jumlah variabel yang perlu dipertimbangkan saat mencari pemisah terbaik), max depth (kedalaman pohon), dan lain lain.
 
 Hasil kinerja dari Random Forest dapat dilihat melalui gambar ini.
-![image](https://github.com/powtoonang/coba/assets/137903953/e656f4e5-1ba7-4f3a-aa4f-fb281a647eff)
+![image](https://github.com/powtoonang/coba/assets/137903953/8959f0e7-84b1-479c-9950-a81077d42f4d)
+
 
 Gambar 4. Confusion Matrix Random Forest
 
 
 Feature Importance Random Forest
 feature importance Random Forest dapat dilihat melalui gambar dibawah ini
-![image](https://github.com/powtoonang/coba/assets/137903953/a0617e95-8ac0-4618-bc0c-464d7add08a4)
+
+![image](https://github.com/powtoonang/coba/assets/137903953/8c17e4d0-55b9-43db-bb31-ea8665629153)
+
 
 Gambar 5. Feature Importance Random Forest
 
@@ -135,17 +141,20 @@ Hasil klasifikasi menggunakan SVM dapat dilihat melalui confusion matrix dibawah
 Gambar 6. Confusion Matrix SVM
 
 
-# EVALUSASI
+# EVALUASI
 Berdasarkan hasil klasifikasi, akan dilakukan perbandingan dari kedua model tersebut. Melalui confusion matrix, dapat dihitung evaluation matrix untuk menilai kinerja dari sebuah algoritma klasifikasi, yaitu akurasi, presisi, recall, dan f1 score.
 Evaluation matrix dari Random forest dapat dilihat melalui gambar dibawah ini. 
 
 ![cfrf](https://github.com/powtoonang/coba/assets/137903953/0c904771-0811-4040-bf0a-87b7fe3fa599)
 
 Gambar 7. Evaluasi Matrix Random Forest
+
 Dari gambar tersebut dapat diketahui bahwa akurasi, presisi, recall, dan f1 score dari random forest sebesar 0,99. Sedangkan untuk SVM evaluation matrix dapat dilihat melalui gambar dibawah ini.
+
 ![cfsvm](https://github.com/powtoonang/coba/assets/137903953/a5147fcd-0a0e-42e1-9832-4117171ed794)
 
 Gambar 8. Evaluasi Matrix SVM
+
 Dari gambar tersebut dapat diketahui bahwa akurasi, presisi, recall, dan f1 score dari svm sebesar 0,98.
 
 Dari kedua algoritma yang sudah digunakan, dapat dibandingkan bahwa algoritma random forest memiliki performa yang lebih bagus dibandingkan dengan SVM meskipun perbedaannya tidak terlalu jauh.
