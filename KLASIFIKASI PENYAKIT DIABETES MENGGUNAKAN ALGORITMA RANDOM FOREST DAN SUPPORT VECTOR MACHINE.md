@@ -56,15 +56,19 @@ Langkah selanjutnya yaitu melihat apakah terdapat outliers pada data. Dari semua
 sns.boxplot(data=data, x=data['Age'])
 plt.title("Boxplot Age")
 ```
-![Gambar outliers](https://drive.google.com/file/d/1lAkf-dfqtRycDvhqMEKWmdq5PUFqviWa/view)
+![image](https://github.com/powtoonang/coba/assets/137903953/945c0754-d91d-411a-a92f-6380a493f0fd)
 
+Gambar 1. Outliers
 
 Outliers pada variabel Age ini tidak dibuang. Hal itu dikarenakan outliers tersebut merupakan fenomena dari subjek penelitian, sehingga tidak dilakukan pembuangan data.
 
 Langkah selanjutnya yaitu dilakukan pengecekan keseimbangan data.
-![Gambar Keseimbangan Data](https://drive.google.com/file/d/1lAkf-dfqtRycDvhqMEKWmdq5PUFqviWa/view?usp=sharing)
 
-Gambar tersebut memperlihatkan bahwa data tidak seimbang. Oleh karena itu, perlu dilakukan penanganan keseimbangan data. Data dapat diseimbangkan menggunakan Synthetic Minority Oversampling Technique (SMOTE). Data tersebut diseimbangkan setelah data di split menjadi data training dan data testing. 
+![image](https://github.com/powtoonang/coba/assets/137903953/ab5d1290-fad0-4f1a-a059-783813a451c6)
+
+Gambar 2. Keseimbangan Data
+
+Gambar tersebut memperlihatkan bahwa data tidak seimbang. Oleh karena itu, perlu dilakukan penanganan keseimbangan data. Data dapat diseimbangkan menggunakan Synthetic Minority Oversampling Technique (SMOTE). Data tersebut diseimbangkan setelah data di split menjadi data training dan data testing. Rasio pembagian data training dan data testing sebesar 80% dan 20%.
 
 ## MODELLING
 SPLIT DATA
@@ -98,18 +102,27 @@ plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%',
 plt.title('Data Training 80%:20% Setelah Dilakukan Balancing Data')
 plt.show()
 ```
-![GAMBAR SETELAH DILAKUKAN SMOTE](https://drive.google.com/file/d/1OxQSiWKeHqbIrPCqWFDe6yIXzoDDZsAJ/view?usp=sharing)
+![image](https://github.com/powtoonang/coba/assets/137903953/fb67648e-1588-44bb-bc34-5c8c80c3289d)
+
+Gambar 3. Keseimbangn Data Setelah SMOTE
+
 terlihat bahwa data sudah seimbang. Data dengan label -1 setelah diseimbangkan menjadi sebanyak 230 data
 
 ### Klasifikasi Menggunakan Algoritma Random Forest
 Algoritma Random Forest merupakan salah satu ensemble learning. Ensemble learning adalah metode dimana model akan dilatih untuk memecahkan masalah yang sama dan digabungkan untuk mendapatkan suatu hasil yang lebih baik. Algoritma Random Forest ini ialah algoritma yang dikembangkan dari algoritma Decision Tree. Decision tree adalah algoritma yang berbentuk sebuah pohon untuk mengambil kesimpulan. Decision Tree ini dapat digunakan untuk mengklasifikasikan sebuah data dengan variabel input dan output dalam bentuk pohon. Terdapat beberapa istilah yang digunakan dalam Decision Tree, yaitu root node, internal node, dan leaf. Root merupakan node yang terletak pada bagian paling atas di pohon. Internal node merupakan node percabangan yang masih memiliki cabang di bawahnya, sedangkan leaf merupakan node akhir yang tidak memiliki percabangan lagi. Decision Tree akan memasukkan sebuah input melalui root, dan memiliki kesimpulan melalui leaf node untuk menentukan data input termasuk dalam kelas yang mana. Algoritma ini dikembangkan menjadi sebuah algoritma baru yang dinamakan sebagai Random Forest. Sesuai dengan namanya, algoritma ini akan menciptakan sebuah hutan dengan sejumlah pohon. Cara kerja klasifikasi menggunakan algoritma ini yaitu Random Forest akan melakukan bootstrap pada data training untuk membentuk setiap pohon. Selanjutnya, pohon tersebut akan digabungkan dengan pohon yang lain, dimana satu pohon akan menghasilkan satu keputusan. Oleh sebab itu, algorima Random Forest ini dapat dikatakan sebagai kumpulan Decision Tree. Untuk mendapatkan hasil akhir, maka dilakukan majority voting dimana vote terbanyak akan menjadi pemenangnya. Menurut Pamuji dan Ramadhan (2021), algoritma Random Forest ini memiliki kelebihan yaitu dapat menghasilkan eror yang relatif rendah, performa yang baik dalam klasifikasi, dan cocok untuk data yang berjumlah besar. Parameter yang dapat digunakan dalam algoritma ini yaitu n estimator (jumlah pohon), max feature (jumlah variabel yang perlu dipertimbangkan saat mencari pemisah terbaik), max depth (kedalaman pohon), dan lain lain.
 
 Hasil kinerja dari Random Forest dapat dilihat melalui gambar ini.
-![Confusion matrix Random Forest](https://drive.google.com/file/d/17ZkShBRuRl-1SHE9V0Fmqqe9tg9TQzCB/view?usp=sharing)
+![image](https://github.com/powtoonang/coba/assets/137903953/e656f4e5-1ba7-4f3a-aa4f-fb281a647eff)
+
+Gambar 4. Confusion Matrix Random Forest
+
 
 Feature Importance Random Forest
 feature importance Random Forest dapat dilihat melalui gambar dibawah ini
-![Feature Importance Random Forest](https://drive.google.com/file/d/1VVN6SRJgcMVkwQgZHyLWzkV3KaVHNQ2R/view?usp=sharing)
+![image](https://github.com/powtoonang/coba/assets/137903953/a0617e95-8ac0-4618-bc0c-464d7add08a4)
+
+Gambar 5. Feature Importance Random Forest
+
 
 
 ### KLASIFIKASI MENGGUNAKAN ALGORITMA SUPPORT VECTOR MACHINE
@@ -117,14 +130,22 @@ Support vector machine (SVM) merupakan salah satu algoritma yang dapat digunakan
 
 Pada SVM dilakukan normalisasi data. Hal ini dilakukan karena svm bekerja menggunakan jarak, dimana data akan dipisahkan menggunakan hyperplane. Terdapat variabel usia yang memiliki nilai besar dibandingkan dengan variabel yang lainnya. Oleh karena itu dilakukan normalisasi data. 
 Hasil klasifikasi menggunakan SVM dapat dilihat melalui confusion matrix dibawah ini.
-![Confusion matrix svm](https://drive.google.com/file/d/1SK1ndbypI3rj6NAIukizY6kqExCw0Q7-/view?usp=sharing)
+![image](https://github.com/powtoonang/coba/assets/137903953/3d17fbaa-f29b-4e3b-b044-5532db4e0faf)
+
+Gambar 6. Confusion Matrix SVM
+
 
 # EVALUSASI
 Berdasarkan hasil klasifikasi, akan dilakukan perbandingan dari kedua model tersebut. Melalui confusion matrix, dapat dihitung evaluation matrix untuk menilai kinerja dari sebuah algoritma klasifikasi, yaitu akurasi, presisi, recall, dan f1 score.
 Evaluation matrix dari Random forest dapat dilihat melalui gambar dibawah ini. 
-![Random Forest](https://drive.google.com/file/d/1WmoQiBIXeUoE5u0cyfnpFLmBYYqXOOL7/view?usp=sharing)
+
+![cfrf](https://github.com/powtoonang/coba/assets/137903953/0c904771-0811-4040-bf0a-87b7fe3fa599)
+
+Gambar 7. Evaluasi Matrix Random Forest
 Dari gambar tersebut dapat diketahui bahwa akurasi, presisi, recall, dan f1 score dari random forest sebesar 0,99. Sedangkan untuk SVM evaluation matrix dapat dilihat melalui gambar dibawah ini.
-![SVM](https://drive.google.com/file/d/1IOD1ZkbuWw1vL_ZN1AoMczF5ihaujoV5/view?usp=sharing)
+![cfsvm](https://github.com/powtoonang/coba/assets/137903953/a5147fcd-0a0e-42e1-9832-4117171ed794)
+
+Gambar 8. Evaluasi Matrix SVM
 Dari gambar tersebut dapat diketahui bahwa akurasi, presisi, recall, dan f1 score dari svm sebesar 0,98.
 
 Dari kedua algoritma yang sudah digunakan, dapat dibandingkan bahwa algoritma random forest memiliki performa yang lebih bagus dibandingkan dengan SVM meskipun perbedaannya tidak terlalu jauh.
@@ -132,12 +153,20 @@ Selain itu, dari algoritma Random Forest dapat diketahui variabel yang berpengar
 
 
 # REFERENSI
-IDF. (2021). IDF Diabetes Atlas 10th Edition. www.diabetesatlas.org diakses pada tanggal 8 Agustus 2022.
-Iman, Q. & Wijayanto, A. W. (2021). Klasifikasi Rumah Tangga Penerima Beras Miskin (Raskin)/Beras Sejahtera (Rastra) di Provinsi Jawa Barat Tahun 2017 dengan Metode Random Forest dan Support Vector Machine. JUSTIN (Jurnal Sistem dan Teknologi Informasi), 9(2), 178-184.
-Lyngdoh, A. C., Choudhury, N. A., & Moulik, S. (2021, March). Diabetes Disease Prediction Using Machine Learning Algorithms. In 2020 IEEE-EMBS Conference on Biomedical Engineering and Sciences (IECBES) (pp. 517-521). IEEE.
-Nugraha, W., & Sabaruddin, R. (2021). Teknik Resampling untuk Mengatasi Ketidakseimbangan Kelas pada Klasifikasi Penyakit Diabetes Menggunakan C4. 5, Random Forest, dan SVM. Techno. Com, 20(3), 352-361.
-Pamuji, F. Y. & Ramadhan, V. P. (2021). Komparasi Algoritma Random Forest dan Decision Tree untuk Memprediksi Keberhasilan Immunotheraphy. Jurnal Teknologi dan Manajemen Informatika, 7(1), 46-50.
-Sutoyo, E., & Fadlurrahman, M. A. (2020). Penerapan SMOTE untuk Mengatasi Imbalance Class dalam Klasifikasi Television Advertisement Performance Rating Menggunakan Artificial Neural Network. JEPIN (Jurnal Edukasi dan Penelitian Informatika), 6(3), 379-385.
-WHO. (2020). The Top 10 Causes of Death. Diakses dari https://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death 
-WHO. (2021). Diabetes. Diakses dari  https://www.who.int/health-topics/diabetes#tab=tab_1 
-WHO. (2022). Diabetes. Diakses dari https://www.who.int/news-room/fact-sheets/detail/diabetes
+[1] IDF. (2021). IDF Diabetes Atlas 10th Edition. www.diabetesatlas.org diakses pada tanggal 8 Agustus 2022.
+
+[2] Iman, Q. & Wijayanto, A. W. (2021). Klasifikasi Rumah Tangga Penerima Beras Miskin (Raskin)/Beras Sejahtera (Rastra) di Provinsi Jawa Barat Tahun 2017 dengan Metode Random Forest dan Support Vector Machine. JUSTIN (Jurnal Sistem dan Teknologi Informasi), 9(2), 178-184.
+
+[3] Lyngdoh, A. C., Choudhury, N. A., & Moulik, S. (2021, March). Diabetes Disease Prediction Using Machine Learning Algorithms. In 2020 IEEE-EMBS Conference on Biomedical Engineering and Sciences (IECBES) (pp. 517-521). IEEE.
+
+[4] Nugraha, W., & Sabaruddin, R. (2021). Teknik Resampling untuk Mengatasi Ketidakseimbangan Kelas pada Klasifikasi Penyakit Diabetes Menggunakan C4. 5, Random Forest, dan SVM. Techno. Com, 20(3), 352-361.
+
+[5] Pamuji, F. Y. & Ramadhan, V. P. (2021). Komparasi Algoritma Random Forest dan Decision Tree untuk Memprediksi Keberhasilan Immunotheraphy. Jurnal Teknologi dan Manajemen Informatika, 7(1), 46-50.
+
+[6] Sutoyo, E., & Fadlurrahman, M. A. (2020). Penerapan SMOTE untuk Mengatasi Imbalance Class dalam Klasifikasi Television Advertisement Performance Rating Menggunakan Artificial Neural Network. JEPIN (Jurnal Edukasi dan Penelitian Informatika), 6(3), 379-385.
+
+[7] WHO. (2020). The Top 10 Causes of Death. Diakses dari https://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death 
+
+[8] WHO. (2021). Diabetes. Diakses dari  https://www.who.int/health-topics/diabetes#tab=tab_1 
+
+[9] WHO. (2022). Diabetes. Diakses dari https://www.who.int/news-room/fact-sheets/detail/diabetes
