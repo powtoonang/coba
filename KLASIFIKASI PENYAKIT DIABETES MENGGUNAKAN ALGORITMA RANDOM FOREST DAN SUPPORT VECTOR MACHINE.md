@@ -157,8 +157,10 @@ Gambar 8. Evaluasi Matrix SVM
 
 Dari gambar tersebut dapat diketahui bahwa akurasi, presisi, recall, dan f1 score dari svm sebesar 0,98.
 
-Dari kedua algoritma yang sudah digunakan, dapat dibandingkan bahwa algoritma random forest memiliki performa yang lebih bagus dibandingkan dengan SVM meskipun perbedaannya tidak terlalu jauh.
-Selain itu, dari algoritma Random Forest dapat diketahui variabel yang berpengaruh terhadap penyakit diabetes ini. Tiga variabel yang paling berpengaruh terhadap penyakit diabetes ini secara berturut turut yaitu Polydipsia, Polyuria, dan Gender.
+Berdasarkan hasil analisis yang telah dilakukan, didapatkan kesimpulan bahwa:
+1. Algoritma Random Forest dan Support Vector Machine mampu mengklasifikasikan data penyakit diabetes dengan baik.
+2. Algoritma Random Forest terbaik memiliki akurasi yang didapatkan sebesar 0,98, presisi 0,96, recall 1, specificity 0,95, dan F1-score sebesar 0,98. Pada algoritma Support Vector Machine, model terbaiknya yaitu berada pada split data 80%:20% dengan akurasi 0,92, presisi 0,89, recall 0,98, specificity 0,84, dan F1-score 0,93. Dari kedua algoritma didapatkan bahwa Random Forest dengan split data 80%:20% merupakan algoritma terbaik dalam klasifikasi penyakit diabetes ini.
+3. Tiga variabel yang paling berpengaruh dalam klasifikasi penyakit diabetes ini secara berturut turut yaitu polyuria, polydipsia, dan jenis kelamin.
 
 
 # REFERENSI
