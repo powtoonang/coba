@@ -59,6 +59,7 @@ plt.title("Boxplot Age")
 ![image](https://github.com/powtoonang/coba/assets/137903953/09435adc-1aed-44a3-bbf0-8ea50d638bb9)
 
 
+
 Gambar 1. Outliers
 
 Outliers pada variabel Age ini tidak dibuang. Hal itu dikarenakan outliers tersebut merupakan fenomena dari subjek penelitian, sehingga tidak dilakukan pembuangan data.
